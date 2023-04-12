@@ -1,0 +1,318 @@
+@charset"utf-8";
+
+
+/*공통 css*/
+*{padding: 0; margin: 0; position: relative;}
+ul,ol,li{list-style: none;}
+clear{clear: both;}
+body{font-family: 'Roboto';}
+
+::selection{background: black; color: #e50914;}
+
+body a{text-decoration: none; color: inherit;}
+body a:hover{text-decoration: none; color: inherit;}
+body a:visited{text-decoration: none; color: inherit;}
+body a:link{text-decoration: none;}
+
+.button-red{width: 175px; height: 56px; 
+    line-height: 56px; background-color: #e50914; font-size: 14px; text-align: center;
+    border-radius: 50px; margin: 0 auto; cursor: pointer;}
+section .title{text-align: center;}
+section .title .p1{font-size: 36px;line-height: 57px; text-transform: uppercase;}
+section .title .p2{color: #969696; font-size: 14px; letter-spacing: 1px;}
+section .title span{display: inline-block; width: 45px; height: 4px; background-color: #e50914; margin: 20px 0;}
+section .indicator{display: flex; width: 100px; justify-content: center; margin: 0 auto;}
+section .indi{text-align: center; margin-bottom: 20px; padding: 0 5px; transition: 0.5s; cursor: pointer; color: #969696;}
+section .indi:hover{color: #e50914;}
+section .indicator .indi:nth-child(1){color: #e50914;}
+.gradation-left{position: absolute; top:0; left:0; width:15%; height:100%;z-index: 10; display: flex; align-items: center;
+background-image: linear-gradient(90deg,black 0%,transparent 90%,transparent 100%); cursor: pointer; transition: 0.5s;
+color: white; padding-left: 3%; font-size: 30px;}
+.gradation-right{position: absolute; top:0; right:0; width:15%; height:100%;z-index: 20; display: flex; align-items: center;
+background-image: linear-gradient(90deg,transparent 00%,transparent 10%, black 100%); cursor: pointer;transition: 0.5s;
+color: white; padding-right: 3%; font-size: 30px; justify-content: flex-end;}
+
+@keyframes arrow{
+    0%{transform: translateX(0)}
+    50%{transform: translateX(-5px)}
+}
+
+/*헤더(로고+메뉴바, 첫 상단 메인페이지)css*/
+header{width: 100%; height: 100vh;}
+header .frame{height: 50vh; overflow: hidden; top: 0; left: 0;}
+header .frame video{height: 1080px; width: 1920px}
+header .bg{height: 50vh; background: black; font-family: "Noto Sans KR"}
+header .bg>span{font-size: 60px; color: white; position: absolute; right: 10%; top: calc(-50% + 110px);}
+header .span2{letter-spacing: 1px;}
+header .bg .logo{width: 265px; position: absolute; right: 0; bottom: 0;}
+header .bg .logo img{width: 100%;}
+header .button-red{position: absolute; right: 0; top: 300px; color: white;}
+
+header .btn{display: flex; position: fixed; cursor: pointer; top:-10px; height: 45px; width: 45px; align-items: center; justify-content: center; z-index: 800; border-radius: 10px; background: black; border: 1px solid #e50914; color: #e50914; transition: 0.3s; transform: translateX();}
+header .btn-top{left: calc(10% + 10px);}
+header .btn-top img{width: 35px; top: 4px}
+header .btn-search{left: calc(10% + 60px); font-size: 20px;}
+header .btn-search i{top: 4px}
+header .btn-login{width: 60px; left: calc(10% + 110px)}
+header .btn-login>span{font-weight: bold; line-height: 35px; top: 5px;}
+header .btn-login .login{display: none; transition: 0.5s;}
+header .btn-search, header .btn-login:hover{color: #e50914 !important;}
+
+.btn-active{padding: 30px 20px; width: 300px !important; height: 230px !important; cursor: default !important;}
+.btn-active>span{display: none;}
+.btn-active .login{display: flex !important; flex-direction: column; width: 100%}
+.btn-active .login .x{font-size: 20px; cursor: pointer; display: block; width: 20px; height: 20px; position: absolute; top: -10px;right: 0;}
+.btn-active .login>input{height: 30px; background: #333; border: none; margin: 5px 0; color: white; text-indent: 5px;}
+.btn-active .login>input:nth-child(2){margin-top: 20px;}
+.btn-active .login>input:nth-child(4){background: #e50914; color: white;}
+.btn-active .login>input:focus{outline: none;}
+.btn-active .login .check{width: 100%; text-align: left; color: white;}
+.btn-active .login .check input[type="checkbox"]{display: none;}
+.btn-active .login .check input[type="checkbox"]+label{display: inline-block; width: 18px; height: 18px; border-radius: 3px; cursor: pointer; background: #333;}
+.btn-active .login .check input[type="checkbox"]:checked+label{background : url(https://image.flaticon.com/icons/svg/2089/2089713.svg) #e50914 no-repeat center/10px 10px;}
+.btn-active .login .check label span{left: 25px;}
+.btn-active .login p{color: #969696; margin-top: 5px; text-align: left;}
+.btn-active .login p span{color: white; cursor: pointer;}
+
+/*검색메뉴*/
+.search-menu{position: fixed; background: black; height: 100vh; width: 100%; top: -100%; left: 0; z-index: 600; color: white; display: flex; align-items: center; justify-content: center; transition: 0.5s;}
+.search-menu .group{width: 100%; max-width: 1200px; padding: 0 80px;}
+.search-menu .search-group{text-align: center;}
+.search-menu .search-group i:nth-of-type(1){position: absolute; top: 12px; font-size: 20px; color: #e50914; left: 12px; z-index: 10;}
+.search-menu .search-group input{border: 2px solid #e50914; border-radius: 5px; padding: 10px; color: #e50914; font-weight: bold; width: 100%; transition: 0.5s; background: none; text-indent: 30px}
+.search-menu .search-group input::placeholder{color: #e50914}
+.search-menu .search-group input:focus{color: #e50914; background: white; outline: none;}
+.search-menu .search-group i:nth-of-type(2){font-size: 20px; position: absolute; top: 12px; right: 12px; z-index: 100; color: #e50914; cursor: pointer; animation: arrow; animation-duration: 1s; animation-iteration-count: infinite;}
+.search-menu .recommend{margin: 50px 0;}
+.search-menu .recommend .wrap{display: flex; margin-bottom: 0; overflow: hidden; height: 168px;}
+.search-menu .recommend .wrap li{margin-right:15px; transition: 1s; position: absolute;}
+.search-menu .recommend .wrap li:nth-child(1){left: -314px}
+.search-menu .recommend .wrap li:nth-child(2){left: 0}
+.search-menu .recommend .wrap li:nth-child(3){left: 314px}
+.search-menu .recommend .wrap li:nth-child(4){left: 628px}
+.search-menu .recommend .wrap li:nth-child(5){left: 942px}
+.search-menu .recommend .wrap li:nth-child(6){left: 1256px}
+.search-menu .recommend .wrap li img{cursor: pointer; display: block; }
+.search-menu .recommend .gradation-left{display: none;}
+.search-menu .menu{width: 100; margin: 0 auto;}
+.search-menu .menu-list{font-size: 30px; font-weight: 900}
+.search-menu .menu-list li{margin-bottom: 15px; width: 350px; cursor: pointer; transition: 0.3s;}
+.search-menu .menu-list li:hover{color: #e50914;}
+.search-menu .logo{position: absolute; width: 400px; right: 80px; bottom: 40px;}
+.search-menu .logo img{width: 100%;}
+
+.menu-slide{top: 0 !important;}
+
+
+/*서비스 안내부분 css*/
+.service{width: 100%; background: black; padding : 65px 0; padding-bottom: 75px;  font-family: "Noto Sans KR";}
+.service .container{display: flex; max-width: 1200px; margin: 0 auto; padding: 0 20px; justify-content: center;}
+.service .box{width: 33.33%; padding: 0 20px}
+.service img{width: 100%; display: block; z-index: 100;}
+.service .video-box{position: absolute; width: 100%;}
+.service .video-box1{top: 22%; left: 15%; max-width: 70%;}
+.service .video-box2{top: 62%; left: 62%; max-width: 15%; z-index: 200;}
+.service .video-box3{top: 22%; left: 18%; max-width: 62%;}
+.service video{width: 100%;}
+.service p{color: #969696; text-align: center; top: -40px; margin-bottom: 0}
+.service .p1{font-weight: bold; line-height: 26px; margin-bottom: 20px; font-size: 18px;}
+.service .p2{font-size: 14px; line-height: 24px}
+
+
+/*영화슬라이드 css*/
+.movie{width: 100%; height: 100%; background-color: black;}
+.movie .arrow{display: flex; color: white; font-weight: 800; justify-content: flex-end; right: 50px;}
+.movie .arrow i{animation: arrow; animation-duration: 1s; animation-iteration-count: infinite; left: 15px; top: 4px;}
+.movie .slide-group{overflow: hidden;}
+.movie .wrap{display: flex; height: auto;}
+.movie .slide{display: flex; flex-wrap: wrap; position: absolute; width: 100%; transition: 0.5s;}
+.movie .slide:nth-child(1){left: -100%;}
+.movie .slide:nth-child(2){left: 0;}
+.movie .slide:nth-child(3){left: 100%;}
+.movie .slide:nth-child(4){left: 200%;}
+.movie .slide .poster{width: 33.33%; overflow: hidden;}
+.movie .slide img{width: 100%; cursor: pointer; transition: 1s;}
+.movie .gradation{opacity: 0}
+.movie .gradation:hover{opacity: 100;}
+.movie .slide img:hover{transform: scale(1.1); z-index: 10}
+
+
+/*추천카테고리 css*/
+.category{color: white; background-color: black; padding-top: 30px; padding-bottom: 30px; overflow: hidden;}
+.category .row{display: flex; max-width: 1200px; margin: 0 auto; padding: 0 40px; justify-content: space-between;}
+.category .title{display: flex; flex-direction: column; justify-content: center; align-items: center;}
+.category p{width: 400px;}
+.category p:nth-child(2){display: none;}
+.category .container{display: flex; align-items: center; justify-content: flex-end; padding: 0 20px;}
+.category .arrow{font-size: 40px; cursor: pointer; z-index: 10; margin-left: 40px;}
+.category .category-list{width: 540px; height: 110%; overflow: hidden;}
+.category .category-list .wrap{display: flex; width: 1080px;}
+.category .select{display: flex; justify-content: center;background: black; width: 540px; position: absolute; height: 100%;}
+.category .select:nth-child(1){left: -100%;}
+.category .select:nth-child(2){left: 0%;}
+.category .select:nth-child(3){left: 100%;}
+.category .select:nth-child(4){left: -200%;}
+.category .select .item{display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100px; height: 130px; margin: 0 20px; font-family: "Noto Sans KR"}
+.category .select li{cursor: pointer;}
+.category .select i{font-size: 80px; transition: 0.5s; padding-bottom: 15px;}
+.category .select li:hover i{color: #e50914;}
+.category .select li span{font-size: 12px;letter-spacing: 2px;}
+.category .button-red{display: none;}
+.category .left{display: none;}
+
+
+/*이벤트 css*/
+.event{background-color: white; padding: 85px 0; padding-bottom: 91px;}
+.event img{cursor: pointer; display: block; z-index: 10; box-shadow: 1px 1px 5px rgba(0,0,0,0.5); margin-bottom: 20px;}
+.event .event-group{overflow: hidden;}
+.event .event-group .wrap{display: flex; width: 200%;}
+.event .row{margin-top: 40px; margin-bottom: 20px; width: 100%;}
+.event .left{position: absolute; top:0; left:0; width:15%; height:100%;z-index: 10; display: flex; align-items: center; cursor: pointer; background-image: linear-gradient(90deg,white 0%,transparent 90%,transparent 100%); opacity: 0; transition: 0.5s; display: none;}
+.event .right{position: absolute; top:0; right:0; width:15%; height:100%;z-index: 10; display: flex; align-items: center; cursor: pointer; justify-content: flex-end; background-image: linear-gradient(90deg,transparent 00%,transparent 10%, white 100%); opacity: 0; transition: 0.5s;}
+.event .left:hover{opacity: 1;}
+.event .right:hover{opacity: 1;}
+
+
+/*QNA css*/
+.ask{color: white; background-color: #1c1c1c; padding: 85px 0; padding-bottom: 91px;}
+.ask .title .p2>span{display: inline; background: transparent; color: #e50914; font-weight: bold; cursor: pointer;}
+.ask .ask-list{overflow: hidden;}
+.ask .ask-list .wrap{width: 200%; display: flex;}
+.ask .asked{display: flex; justify-content: space-around; margin : 40px 0; width: 100%;}
+.ask .box{line-height: 24px; color: #969696; font-size: 16px; padding: 0 20px;}
+.ask .box p{cursor: pointer;}
+
+.social{background-color: black; color: #969696; padding: 50px 0;}
+.social .container{display: flex; justify-content: center; align-items: center; padding: 0 30px;}
+.social .adress{display: flex; flex-direction: column; align-items: flex-end;; font-size: 12px; text-align: end;}
+.social .icon{display: flex; flex-direction: column; align-items: center;}
+.social .icon span{display: inline-block; width: 40px; height: 40px; border: 2px solid #666666; text-align: center; border-radius: 50%; transition: 0.5s; cursor: pointer; margin-left: 30px; margin-top: 5px; margin-bottom: 5px;}
+.social .icon span .fab{font-size: 20px; line-height: 40px;}
+.social .icon span:hover{color: #e50914; border-color: #e50914; background-color: white;}
+.social .adress p{margin-bottom: 0; line-height: 22px;}
+.social .adress>:nth-child(6){font-weight: bold; font-size: 14px; cursor: pointer; width: 150px;}
+
+/*하단 css*/
+footer{height: 100%; background-color: #1c1c1c; color: #969696; }
+footer .container{padding: 85px 30px; padding-bottom: 91px;}
+footer .container .email p{color: white; font-size: 12px;}
+footer .container .email-box{border: 2px solid #e50914; display: flex; justify-content: space-between; border-radius: 5px; padding: 10px; color: #e50914; font-weight: bold; width: 80%; transition: 0.5s; background: none;}
+footer .container .email-box::placeholder{color: #e50914}
+footer .container .email-box:focus{color: #e50914; background: white; outline: none;}
+footer .container .email i{position: absolute; top: 40px; right: 22%; z-index: 100; color: #e50914; cursor: pointer; animation: arrow; animation-duration: 1s; animation-iteration-count: infinite;}
+footer .container .contact{padding: 40px 0; cursor: pointer; width: 95%;}
+footer .container .title{font-size: 22px; color: white; padding: 10px 0;}
+footer .container ul{padding: 15px 0; line-height: 34px;}
+footer .logo{position: absolute; top: 0; right:0; height: 100%;}
+footer .logo img{height: 100%; display: block;}
+footer .logo-mobile img{display: none;}
+
+
+
+/*미디어쿼리*/
+@media(max-width:1200px){
+    
+    header .bg>span{font-size: 40px;top: calc(-50% + 155px); right: 5%;}
+    header .span2{letter-spacing: 0.5px;}
+    header .bg .logo{width: 180px;}
+    header .btn-top{left: 10px;}
+    header .btn-search{left: 60px;}
+    header .btn-login{left: 110px}
+    header .button-red{top: 200px;}
+    
+    .main-menu .group{padding: 0 60px;}
+    .main-menu .logo{width: 350px; bottom: 60px}
+    
+    .category .title p{width: 200px}
+    .category .category-list{width: 450px;}
+    .category .wrap{width: 900px;}
+    .category .select{width: 450px; top: 20px;}
+    .category .select .item{margin: 0;}
+}
+
+@media(max-width:768px) {
+    
+    header .bg>span{font-size: 20px; top: auto; bottom: 100px;}
+    header .span2{letter-spacing: 0.5px;}
+    header .bg .logo{width: 90px;}
+    header .button-red{top: 100px; width: 120px; height: 40px; line-height: 40px;}
+    header .frame video{width: 220%; height: 220%;}
+    
+    .btn-active{transform: translateX(-100px); width: 250px !important;}
+    .btn-active .login p{font-size: 12px;}
+    
+    .search-menu .group{padding: 0 60px;}
+    .search-menu .logo{display: none;}
+    .search-menu .menu-list li{}
+    
+    .service{text-align: center; padding: 40px 0; height: 100vh; box-sizing: border-box; display: flex; align-items: center; min-height: 600px}
+    .service .container{display: inline-block; text-align: center;}
+    .service .box{display: flex; justify-content: center; align-items:center; width: 90%; margin: 0 auto;}
+    .service .service1{margin-bottom: 40px;}
+    .service .service2{margin-bottom: 40px;}
+    .service .box>img{width: 50%;}
+    .service .box p{top: 0;}
+    .service .box .p1{font-size: 14px; line-height: 24px; margin-bottom: 5px;}
+    .service .box .p2{font-size: 12px; line-height: 22px}
+    /*인라인 블록의 경우 글자속성을 갖게되므로 상위태그에 텍스트 얼라인 센터 속성을 부여해줘야 왼쪽에서 오른쪽으로 흐르며, 그냥 블록을 걸어줄경우 자체적으로 100%의 크기값(?)을 충족시킨다.*/
+    
+    .movie .slide1 .poster{width: 100% !important; position: absolute; transition: 0.5s;}
+    .movie .slide1 .poster:nth-child(1){left: -100%;}
+    .movie .slide1 .poster:nth-child(2){left: 0%;}
+    .movie .slide1 .poster:nth-child(3){left: 100%;}
+    .movie .slide1 .poster:nth-child(4){left: 200%;}
+    .movie .slide1 .poster:nth-child(5){left: 300%;}
+    .movie .slide1 .poster:nth-child(6){left: 400%;}
+    .movie .poster img{width: 100% !important;}
+    .movie .slide:not(.slide1){display: none;}
+    .movie .arrow{right: 30px;}
+    
+    section .title span{margin-bottom: 0;}
+    
+    .category{height: 100vh; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; margin: 0 auto;}
+    .category .row{display: block; width: 100%; }
+    .category .row .title p:nth-child(2){display: block;}
+    .category .container{padding: 0; width: 100%;}
+    .category .category-list{width: 100%; height: 300px;}
+    .category .category-list .wrap{width: 100%;}
+    .category .select{display: grid; grid-template-columns: auto auto; width: 100%;}
+    .category .button-red{display: block;}
+    .category .left{display: block;}
+    .category .arrow{margin-left: 0;}
+    
+    .event .row{max-width: 606px; margin: 40px auto;}
+    
+    footer .logo img{display: none;}
+    footer .logo-mobile img{display: inline-block; width: 100%; display: block;}
+    footer .container .email-box{width: 100%;}
+    footer .container .email i{top: 40px; right: 3%;}
+}
+
+@media(max-width:449px){
+    header .logo img{width: 70%;}
+    
+    .search-menu .group{padding: 0 20px;}
+    .search-menu .recommend{margin: 10px 0}
+    .search-menu .recommend .wrap{height: 150px;}
+    .search-menu .recommend img{height: 100%;}
+    .search-menu .menu-list{font-size: 20px; margin-bottom: 10px;}
+    
+    section .title .p1{font-size: 30px; line-height: 40px; margin-bottom: 0}
+    section .title span{margin-bottom: 0px; margin-top: 10px}
+    
+    .category .row{padding: 0 5px}
+    .category .container{margin: 20px 0;}
+    .category .select .item{margin: 0 10px;}
+    
+    .event .row{max-width: 606px; margin: 20px auto;}
+    .event{height: 100vh;display: flex; flex-direction: column; justify-content: center; box-sizing: border-box;}
+    
+    .ask{height: 100vh; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box;}
+    .ask .container {display: flex; flex-direction: column; align-items: center;}
+    .ask .asked{display: inline-block; margin : 40px 0;}
+    
+    .social .adress{font-size: 11px;}
+    
+    footer .container .email i{top: 58px; right: 3%;}
+   
+}

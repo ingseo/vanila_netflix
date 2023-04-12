@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="css/netflix/netflix_favicon.png">
+    <title>넷플릭스 바닐라 자바스크립트</title>
+    <link rel="stylesheet" href="css/netflix-css2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">    
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900|Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="btn btn-top">
+            <img src="css/netflix/Logo_N.png" alt="">
+        </div>
+        <div class="btn btn-search">
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="btn btn-login">
+            <span>LOGIN</span>
+            <div class="login">
+                <div class="x">×</div>
+                <input type="text" placeholder="이메일 주소 또는 전화번호">
+                <input type="password" placeholder="비밀번호">
+                <input type="submit" value="로그인">
+                <div class="check">
+                    <input type="checkbox" id="check1">
+                    <label for="check1"><span>로그인 정보 저장</span></label>
+                </div>
+                <p>Netflix 회원이 아닌가요?<span>지금 가입하세요</span></p>
+            </div>
+        </div>
+        <div class="frame">
+            <div class="video">
+                <video src="css/netflix/netflix_cut.mp4" autoplay playsinline muted loop></video>
+            </div>
+        </div>
+        <div class="bg">
+            <span>언제 어디서나 당신이 원한다면<br><span class="span2">당신이 원하는만큼 무제한으로</span><br>당신을 위한 영화관
+                <div class="logo">
+                    <img src="css/netflix/logo_big2.png">
+                </div>
+                <div class="button-red">
+                    <span>30일 무료체험</span>
+                </div>
+            </span>
+        </div>
+
+    </header>
+    
+    <section class="section section0 search-menu">
+        <div class="group">
+            <div class="search-group">
+                <i class="fas fa-search"></i>
+                <input type="search" placeholder="이달의 신작 추천 '도로헤도로'">
+                <i class="fas fa-long-arrow-alt-right"></i>
+            </div>
+            <div class="recommend">
+                <ul class="wrap">
+                    <li><img src="css/netflix/recommend6.jpg"></li>
+                    <li><img src="css/netflix/recommend1.jpg"></li>
+                    <li><img src="css/netflix/recommend2.jpg"></li>
+                    <li><img src="css/netflix/recommend3.jpg"></li>
+                    <li><img src="css/netflix/recommend4.jpg"></li>
+                    <li><img src="css/netflix/recommend5.jpg"></li>
+                </ul>
+                <div class="gradation-right gradation"><i class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="menu">
+            <ul class="menu-list">
+                <li><a href="#">로그인/계정관리</a></li>
+                <li><a href="#">맞춤추천</a></li>
+                <li><a href="#">카테고리별로 찾아보기</a></li>
+            </ul>
+        </div>
+            <div class="logo">
+                <img src="css/netflix/logo_big2.png">
+            </div>
+        </div>
+    </section>
+    
+    <section class="section section1 service">
+       <div class="container">
+            <div class="box service1">
+                <div class="img-box">
+                    <img src="css/netflix/service1.png">
+                    <div class="video-box video-box1">
+                        <video class="animation1" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v" autoplay playsinline muted loop></video>
+                    </div>
+                </div>
+                <div class="part">
+                    <p class="p1">디바이스 호환성</p>
+                    <p class="p2">스마트 TV, PlayStation, Xbox, Chromecast,  블루레이 등 다양한 디바이스에서 시청 할 수 있습니다.</p>
+                </div>
+            </div>
+            <div class="box service2">
+                <div class="img-box">
+                    <img src="css/netflix/service2.png">
+                    <div class="video-box video-box2">
+                        <img class="animation2" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif" autoplay playsinline muted loop>
+                    </div>
+                </div>
+                <div class="part">
+                    <p class="p1">데이터 절약</p>
+                    <p class="p2">간편하게 저장하는 것으로 데이터 사용 없이 휴대용 기기를 통해 시청이 가능합니다.</p>
+                </div>
+            </div>
+            <div class="box service3">
+                <div class="img-box">
+                    <img src="css/netflix/service3.png">
+                    <div class="video-box video-box3">
+                        <video class="animation3" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v" autoplay playsinline muted loop></video>
+                    </div>
+                </div>
+                <div class="part">
+                    <p class="p1">무제한 스트리밍</p>
+                    <p class="p2">각종 영상을 스마트폰, 태블릿, 노트북, TV에서 무제한으로 스트리밍하세요. 추가 요금이 전혀 없습니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section section2 movie">
+        <div class="arrow">
+            <p>Netflix New Movie Monthly</p>
+            <i class="fas fa-long-arrow-alt-right"></i>
+        </div>
+        <div class="slide-group">
+            <div class="wrap">
+                <div class="slide slide4">
+                    <div class="poster"><img src="css/netflix/movie7.jpg"></div>
+                    <div class="poster"><img src="css/netflix/movie8.jpg"></div>
+                    <div class="poster"><img src="css/netflix/movie9.jpg"></div>
+                    <div class="poster"><img src="css/netflix/movie10.jpg"></div>
+                    <div class="poster"><img src="css/netflix/movie11.jpg"></div>
+                    <div class="poster"><img src="css/netflix/movie12.jpg"></div>
+                </div>
+                <div class="slide slide1">
+                    <div class="poster"><img src="css/netflix/movie1.jpg"></div>
+                    <div class="poster"><img src="css/netflix/movie2.jpg"></div>
+                    <div class="poster"><img src="css/netflix/movie3.jpg"></div>
+                    <div class="poster"><img src="css/netflix/movie4.jpg"></div>
+                    <div class="poster"><img src="css/netflix/movie5.jpg"></div>
+                    <div class="poster"><img src="css/netflix/movie6.jpg"></div>
+                </div>
+                <div class="slide slide2">
+                    <div class="poster"><img src="css/netflix/movie7.jpg"></div>
+                    <div class="poster"><img src="css/netflix/movie8.jpg"></div>
+                    <div class="poster"><img src="css/netflix/movie9.jpg"></div>
+                    <div class="poster"><img src="css/netflix/movie10.jpg"></div>
+                    <div class="poster"><img src="css/netflix/movie11.jpg"></div>
+                    <div class="poster"><img src="css/netflix/movie12.jpg"></div>
+                </div>
+                <div class="slide slide3">
+                    <div class="poster"><img src="css/netflix/movie1.jpg"></div>
+                    <div class="poster"><img src="css/netflix/movie2.jpg"></div>
+                    <div class="poster"><img src="css/netflix/movie3.jpg"></div>
+                    <div class="poster"><img src="css/netflix/movie4.jpg"></div>
+                    <div class="poster"><img src="css/netflix/movie5.jpg"></div>
+                    <div class="poster"><img src="css/netflix/movie6.jpg"></div>
+                </div>   
+            </div>
+            <div class="gradation-left gradation"><i class="fas fa-chevron-left"></i></div>
+            <div class="gradation-right gradation"><i class="fas fa-chevron-right"></i></div>
+        </div>   
+    </section>
+    
+    <section class="section section3 category">
+        <div class="row">
+        <div class="title">
+            <p class="p1">Select category</p>
+            <p class="p2">We recommend to help you choose</p>
+            <span></span>
+        </div>
+        <div class="container">
+           <div class="left arrow"><i class="fas fa-chevron-left"></i></div>
+           <div class="category-list">
+                <div class="wrap">
+                    <ul class="select select4">
+                        <li class="item drama"><i class="far fa-comments"></i><span>드라마</span></li>
+                        <li class="item action"><i class="fas fa-hammer"></i><span>액션스릴러</span></li>
+                        <li class="item documentary"><i class="fas fa-crow"></i><span>다큐멘터리</span></li>
+                        <li class="item original"><i class="fab fa-neos"></i><span>N 오리지널</span></li>
+                   </ul>
+                    <ul class="select select1">
+                        <li class="item romance"><i class="fas fa-heart"></i><span>로맨스</span></li>
+                        <li class="item comedy"><i class="far fa-grin-squint-tears"></i><span>코미디</span></li>
+                        <li class="item horror"><i class="fas fa-ghost"></i><span>호러</span></li>
+                        <li class="item kids"><i class="fas fa-baby"></i><span>키즈</span></li>
+                    </ul>
+                    <ul class="select select2">
+                        <li class="item drama"><i class="far fa-comments"></i><span>드라마</span></li>
+                        <li class="item action"><i class="fas fa-hammer"></i><span>액션스릴러</span></li>
+                        <li class="item documentary"><i class="fas fa-crow"></i><span>다큐멘터리</span></li>
+                        <li class="item original"><i class="fab fa-neos"></i><span>N 오리지널</span></li>
+                   </ul>
+                    <ul class="select select3">
+                        <li class="item romance"><i class="fas fa-heart"></i><span>로맨스</span></li>
+                        <li class="item comedy"><i class="far fa-grin-squint-tears"></i><span>코미디</span></li>
+                        <li class="item horror"><i class="fas fa-ghost"></i><span>호러</span></li>
+                        <li class="item kids"><i class="fas fa-baby"></i><span>키즈</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right arrow"><i class="fas fa-chevron-right"></i></div>
+        </div>
+        <div class="button-red">
+            <span>MORE CATEGORY</span>
+        </div>
+        </div>
+    </section>
+    
+    <section class="section section4 event">
+        <div class="container">
+            <div class="title">
+                <p class="p1">Event</p>
+                <p class="p2">Play the movie!</p>
+                <span></span>
+            </div>
+            <div class="event-group">
+                <div class="wrap">
+                    <div class="row">
+                           <div class="col-sm-3 col-xs-6 box">
+                                <img src="css/netflix/event1.jpg" class="img-responsive">
+                            </div>
+                            <div class="col-sm-3 col-xs-6 box">
+                                <img src="css/netflix/event2.jpg" class="img-responsive">
+                            </div>
+                            <div class="col-sm-6 col-xs-15 box">
+                                <img src="css/netflix/event3.jpg" class="img-responsive">
+                            </div>
+                    </div>
+                    <div class="row">
+                           <div class="col-sm-3 col-xs-6 box">
+                                <img src="css/netflix/event4.jpg" class="img-responsive">
+                            </div>
+                            <div class="col-sm-3 col-xs-6 box">
+                                <img src="css/netflix/event5.jpg" class="img-responsive">
+                            </div>
+                            <div class="col-sm-6 col-xs-15 box">
+                                <img src="css/netflix/event6.jpg" class="img-responsive">
+                            </div>
+                    </div>
+                </div>
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+            
+            <div class="indicator">
+                <div class="indi">
+                    <i class="fas fa-circle-notch"></i>
+                </div>
+                <div class="indi">
+                    <i class="fas fa-circle-notch"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section section5 ask">
+        <div class="container">
+            <div class="title">
+                <p class="p1">Frequently Asked Questions</p>
+                <p class="p2">Click <span>here</span> to go to more QnA</p>
+                <span></span>
+            </div>
+            <div class="ask-list">
+                <div class="wrap">
+                    <div class="asked asked1">
+                        <div class="box box1">
+                            <p>넷플릭스란 무엇인가요?</p>
+                            <p>넷플릭스 요금은 얼마인가요?</p>
+                            <p>어디에서 시청할 수 있나요?</p>
+                        </div>
+                        <div class="box box2">
+                            <p>멤버십을 해지하려면 어떻게 하나요?</p>
+                            <p>어떤 콘텐츠를 시청할 수 있나요?</p>
+                            <p>무료이용에 관해 자세히 알 수 있나요?</p>
+                        </div>
+                        </div>
+                    <div class="asked asked2">
+                        <div class="box box1">
+                            <p>비밀번호 재설정은 어떻게 하나요?</p>
+                            <p>원하는 영상 요청은 어떻게 하나요?</p>
+                            <p>Netflix가 작동하지 않는 이유는?</p>
+                        </div>
+                        <div class="box box2">
+                            <p>기프트카드는 어디서 구입하나요?</p>
+                            <p>로그인이 안될때는 어떻게 하나요?</p>
+                            <p>여러 기기에 연결하려면 어떻게 하나요?</p>
+                        </div>
+</div>
+                </div>
+            </div>
+            <div class="indicator">
+                <div class="indi">
+                    <i class="fas fa-circle-notch"></i>
+                </div>
+                <div class="indi">
+                    <i class="fas fa-circle-notch"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section section6 social">
+        <div class="container">
+            <div class="adress">
+                <p>넷플릭스서비시스코리아 유한회사 통신판매업신고번호: 제2018-서울종로-0426호 전화번호:</p>
+                <p>대표: 레지널드 숀 톰프슨</p>
+                <p>이메일 주소: korea@netflix.com</p>
+                <p>주소: 대한민국 서울특별시 종로구 우정국로 26, 센트로폴리스 A동 20층 우편번호 03161</p>
+                <p>클라우드 호스팅: Amazon Web Services Inc.</p>
+                <a href="http://www.ftc.go.kr/www/bizCommView.do?key=232&apv_perm_no=2018300016930200431&pageUnit=10&searchCnd=bup_nm&searchKrwd=%EB%84%B7%ED%94%8C%EB%A6%AD%EC%8A%A4&pageIndex=1"><p>Link to KFTC website</p></a>
+            </div>
+            <div class="icon">
+                <span><a href="https://ko-kr.facebook.com/NetflixKR/"><i class="fab fa-facebook-f"></i></a></span>
+                <span><a href="https://www.youtube.com/channel/UCiEEF51uRAeZeCo8CJFhGWw"><i class="fab fa-instagram"></i></a></span>
+                <span><a href="https://twitter.com/NetflixKR?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fab fa-twitter"></i></a></span>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="email">
+                <p>Ready to watch? Enter your email to create or access your account.</p>
+                <input class="email-box" placeholder="Your Email">
+                <i class="fas fa-long-arrow-alt-right"></i>
+            </div>
+            <div class="contact">
+                <div class="title">contact</div>
+                <ul class="box box1 col-sm-3 col-xs-6">
+                    <li>자주 묻는 질문</li>
+                    <li>투자 정보</li>
+                    <li>개인정보</li>
+                    <li>속도 테스트</li>
+                </ul>
+                <ul class="box box1 col-sm-3 col-xs-6">
+                    <li>고객 센터</li>
+                    <li>입사 정보</li>
+                    <li>쿠키설정</li>
+                    <li>법적 고지</li>
+                </ul>
+                <ul class="box box1 col-sm-3 col-xs-6">
+                    <li>계정</li>
+                    <li>Netflix 지원 디바이스</li>
+                    <li>회사 정보</li>
+                    <li>Netflix Originals</li>
+                </ul>
+                <ul class="box box1 col-sm-3 col-xs-6">
+                    <li>미디어 센터</li>
+                    <li>이용 약관</li>
+                    <li>문의하기</li>
+                </ul>
+            </div>
+        </div>
+        <div class="logo"><img src="css/netflix/logo_big.png"></div>
+        <div class="logo-mobile"><img src="css/netflix/logo_big_mobile.png"></div>
+    </footer>
+    
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="jquery.nicescroll.min.js"></script>
+<script src="netflix_js.js"></script>
