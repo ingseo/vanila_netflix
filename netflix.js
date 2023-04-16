@@ -82,3 +82,48 @@ document.querySelector('.section3 .right').addEventListener('click', () => {
 document.querySelector('.section3 .left').addEventListener('click', () => {
     document.querySelector('.section3 .wrap').prepend([...document.querySelectorAll('.section3 .select')].at(-1));
 })
+
+//event&FAQ
+//차후 중복되는 부분 정리 필요
+function event1page(){
+    document.querySelector('.section4 .wrap').style.left = '0';
+    document.querySelector('.section4 .indi:nth-child(2)').style.color = '#969696'
+    document.querySelector('.section4 .indi:nth-child(1)').style.color = '#e50914'
+    document.querySelector('.section4 .left').style.display = 'none';
+    document.querySelector('.section4 .right').style.display = 'flex';
+}
+function event2page(){
+    document.querySelector('.section4 .wrap').style.left = '-100%';
+    document.querySelector('.section4 .indi:nth-child(1)').style.color = '#969696'
+    document.querySelector('.section4 .indi:nth-child(2)').style.color = '#e50914'
+    document.querySelector('.section4 .left').style.display = 'flex';
+    document.querySelector('.section4 .right').style.display = 'none';
+}
+function faq1page(){
+    document.querySelector('.section5 .wrap').style.left = '0';
+    document.querySelector('.section5 .indi:nth-child(2)').style.color = '#969696'
+    document.querySelector('.section5 .indi:nth-child(1)').style.color = '#e50914'
+}
+function faq2page(){
+    document.querySelector('.section5 .wrap').style.left = '-100%';
+    document.querySelector('.section5 .indi:nth-child(1)').style.color = '#969696'
+    document.querySelector('.section5 .indi:nth-child(2)').style.color = '#e50914'
+}
+document.querySelector('.section4 .left').addEventListener('click', () => {
+    event1page()
+})
+document.querySelector('.section4 .indi:nth-child(1)').addEventListener('click', () => {
+    event1page()
+})
+document.querySelector('.section4 .right').addEventListener('click', () => {
+    event2page()
+})
+document.querySelector('.section4 .indi:nth-child(2)').addEventListener('click', () => {
+    event2page()
+})
+document.querySelector('.section5 .indi:nth-child(1)').addEventListener('click', () => {
+    faq1page()
+})
+document.querySelector('.section5 .indi:nth-child(2)').addEventListener('click', () => {
+    faq2page()
+})

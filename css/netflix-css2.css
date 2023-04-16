@@ -126,7 +126,7 @@ header .btn-search, header .btn-login:hover{color: #e50914 !important;}
 .movie .arrow i{animation: arrow; animation-duration: 1s; animation-iteration-count: infinite; left: 15px; top: 4px;}
 .movie .slide-group{overflow: hidden;}
 .movie .wrap{display: flex; height: auto;}
-.movie .slide{display: flex; flex-wrap: wrap; position: absolute; height: auto; width: 100%; transition: 0.5s;}
+.movie .slide{display: flex; flex-wrap: wrap; position: absolute; width: 100%; transition: 0.5s;}
 .movie .slide:nth-child(1){left: -100%;}
 .movie .slide:nth-child(2){left: 0;}
 .movie .slide:nth-child(3){left: 100%;}
@@ -166,7 +166,7 @@ header .btn-search, header .btn-login:hover{color: #e50914 !important;}
 .event{background-color: white; padding: 85px 0; padding-bottom: 91px;}
 .event img{cursor: pointer; display: block; z-index: 10; box-shadow: 1px 1px 5px rgba(0,0,0,0.5); margin-bottom: 20px;}
 .event .event-group{overflow: hidden;}
-.event .event-group .wrap{display: flex; width: 200%;}
+.event .event-group .wrap{display: flex; width: 200%; transition: 0.5s; left: 0;}
 .event .row{margin-top: 40px; margin-bottom: 20px; width: 100%;}
 .event .left{position: absolute; top:0; left:0; width:15%; height:100%;z-index: 10; display: flex; align-items: center; cursor: pointer; background-image: linear-gradient(90deg,white 0%,transparent 90%,transparent 100%); opacity: 0; transition: 0.5s; display: none;}
 .event .right{position: absolute; top:0; right:0; width:15%; height:100%;z-index: 10; display: flex; align-items: center; cursor: pointer; justify-content: flex-end; background-image: linear-gradient(90deg,transparent 00%,transparent 10%, white 100%); opacity: 0; transition: 0.5s;}
@@ -178,7 +178,7 @@ header .btn-search, header .btn-login:hover{color: #e50914 !important;}
 .ask{color: white; background-color: #1c1c1c; padding: 85px 0; padding-bottom: 91px;}
 .ask .title .p2>span{display: inline; background: transparent; color: #e50914; font-weight: bold; cursor: pointer;}
 .ask .ask-list{overflow: hidden;}
-.ask .ask-list .wrap{width: 200%; display: flex;}
+.ask .ask-list .wrap{width: 200%; display: flex; left: 0; transition: 0.5s;}
 .ask .asked{display: flex; justify-content: space-around; margin : 40px 0; width: 100%;}
 .ask .box{line-height: 24px; color: #969696; font-size: 16px; padding: 0 20px;}
 .ask .box p{cursor: pointer;}
