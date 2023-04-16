@@ -20,15 +20,14 @@ ready(() => {
 window.addEventListener("resize", videoLocation);
 
 //search
+let timer;
 document.querySelector('.btn-search').addEventListener('click', () => {
     document.querySelector('.search-menu').classList.toggle('menu-slide');
     document.querySelector('body').classList.toggle('stop-scrolling')
 });
 function next(){
-    const list = document.querySelector('.search-menu .recommend .wrap li');
-    document.querySelector('.search-menu .recommend .wrap').append(list);
+    document.querySelector('.search-menu .recommend .wrap').append(document.querySelector('.search-menu .recommend .wrap li'));
 }
-let timer;
 document.querySelector('.section0 .gradation').addEventListener('mouseenter', () => {
     timer = setInterval(next,1000);
 })
@@ -43,3 +42,35 @@ document.querySelector('.btn-login>span').addEventListener('click', () => {
 document.querySelector('.x').addEventListener('click', () => {
     document.querySelector('header .btn-login').classList.remove('btn-active');
 });
+
+//movie
+function movieDisplay(){
+    const wrap = document.querySelector('.section2 .wrap');
+    const slideHeight = document.querySelector('.section2 .slide').offsetHeight;
+    const posterHeight = document.querySelector('.section2 .slide1 .poster').offsetHeight;
+    wrap.style.height = slideHeight + 'px';
+    wrap.style.minHeight = posterHeight + 'px';
+}
+ready(() => { 
+    movieDisplay()
+});
+window.addEventListener("resize", movieDisplay);
+document.querySelector('.section2 .gradation-right').addEventListener('click', () => {
+    const winWidth = window.innerWidth;
+    console.log(winWidth)
+    if(winWidth<769){
+        document.querySelector('.section2 .slide1').append(document.querySelector('.section2 .slide1 .poster'));
+    } else if(winWidth>768){
+        document.querySelector('.section2 .wrap').append(document.querySelector('.section2 .slide'))
+    }
+})
+document.querySelector('.section2 .gradation-left').addEventListener('click', () => {
+    const winWidth = window.innerWidth;
+    console.log(winWidth)
+    if(winWidth<769){
+        document.querySelector('.section2 .slide1').prepend([...document.querySelectorAll('.section2 .slide1 .poster')].at(-1));
+    } else if(winWidth>768){
+        document.querySelector('.section2 .wrap').prepend([...document.querySelectorAll('.section2 .slide')].at(-1));
+        
+    }
+})
