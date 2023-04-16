@@ -74,3 +74,11 @@ document.querySelector('.section2 .gradation-left').addEventListener('click', ()
         
     }
 })
+
+//category
+document.querySelector('.section3 .right').addEventListener('click', () => {
+    document.querySelector('.section3 .wrap').append(document.querySelector('.section3 .select'));
+})
+document.querySelector('.section3 .left').addEventListener('click', () => {
+    document.querySelector('.section3 .wrap').prepend([...document.querySelectorAll('.section3 .select')].at(-1));
+})
