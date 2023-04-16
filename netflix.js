@@ -18,3 +18,21 @@ ready(() => {
     videoLocation();
 });
 window.addEventListener("resize", videoLocation);
+
+//search
+document.querySelector('header .btn-search').addEventListener('click', () => {
+    document.querySelector('.search-menu').classList.toggle('menu-slide');
+    document.querySelector('body').classList.toggle('stop-scrolling')
+});
+function next(){
+    const list = document.querySelector('.search-menu .recommend .wrap li');
+    document.querySelector('.search-menu .recommend .wrap').append(list);
+}
+let timer;
+document.querySelector('.section0 .gradation').addEventListener('mouseenter', () => {
+    timer = setInterval(next,1000);
+    console.log(timer)
+})
+document.querySelector('.section0 .gradation').addEventListener('mouseleave', () => {
+    clearInterval(timer)
+})

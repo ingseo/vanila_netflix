@@ -31,6 +31,7 @@ color: white; padding-left: 3%; font-size: 30px;}
 .gradation-right{position: absolute; top:0; right:0; width:15%; height:100%;z-index: 20; display: flex; align-items: center;
 background-image: linear-gradient(90deg,transparent 00%,transparent 10%, black 100%); cursor: pointer;transition: 0.5s;
 color: white; padding-right: 3%; font-size: 30px; justify-content: flex-end;}
+.stop-scrolling {height: 100%; overflow: hidden;}
 
 @keyframes arrow{
     0%{transform: translateX(0)}
@@ -243,7 +244,6 @@ footer .logo-mobile img{display: none;}
     
     .search-menu .group{padding: 0 60px;}
     .search-menu .logo{display: none;}
-    .search-menu .menu-list li{}
     
     .service{text-align: center; padding: 40px 0; height: 100vh; box-sizing: border-box; display: flex; align-items: center; min-height: 600px}
     .service .container{display: inline-block; text-align: center;}
@@ -314,5 +314,5 @@ footer .logo-mobile img{display: none;}
     .social .adress{font-size: 11px;}
     
     footer .container .email i{top: 58px; right: 3%;}
-   
+
 }
