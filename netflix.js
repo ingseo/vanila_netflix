@@ -20,7 +20,7 @@ ready(() => {
 window.addEventListener("resize", videoLocation);
 
 //search
-document.querySelector('header .btn-search').addEventListener('click', () => {
+document.querySelector('.btn-search').addEventListener('click', () => {
     document.querySelector('.search-menu').classList.toggle('menu-slide');
     document.querySelector('body').classList.toggle('stop-scrolling')
 });
@@ -31,8 +31,15 @@ function next(){
 let timer;
 document.querySelector('.section0 .gradation').addEventListener('mouseenter', () => {
     timer = setInterval(next,1000);
-    console.log(timer)
 })
 document.querySelector('.section0 .gradation').addEventListener('mouseleave', () => {
     clearInterval(timer)
 })
+
+//login
+document.querySelector('.btn-login>span').addEventListener('click', () => {
+    document.querySelector('header .btn-login').classList.add('btn-active');
+});
+document.querySelector('.x').addEventListener('click', () => {
+    document.querySelector('header .btn-login').classList.remove('btn-active');
+});
