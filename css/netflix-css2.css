@@ -153,8 +153,9 @@ header .btn-search, header .btn-login:hover{color: #e50914 !important;}
 .category .select:nth-child(2){left: 0%;}
 .category .select:nth-child(3){left: 100%;}
 .category .select:nth-child(4){left: -200%;}
-.category .select .item{display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100px; height: 130px; margin: 0 20px; font-family: "Noto Sans KR"}
-.category .select li{cursor: pointer;}
+.category .select .item{display: flex; justify-content: center; width: 100px; height: 130px; margin: 0 20px; font-family: "Noto Sans KR"}
+.category .select .item li{cursor: pointer;}
+.category .select .item a{display: flex; flex-direction: column; justify-content: center; align-items: center; }
 .category .select i{font-size: 80px; transition: 0.5s; padding-bottom: 15px;}
 .category .select li:hover i{color: #e50914;}
 .category .select li span{font-size: 12px;letter-spacing: 2px;}
@@ -201,7 +202,7 @@ footer .container .email-box{border: 2px solid #e50914; display: flex; justify-c
 footer .container .email-box::placeholder{color: #e50914}
 footer .container .email-box:focus{color: #e50914; background: white; outline: none;}
 footer .container .email i{position: absolute; top: 40px; right: 22%; z-index: 100; color: #e50914; cursor: pointer; animation: arrow; animation-duration: 1s; animation-iteration-count: infinite;}
-footer .container .contact{padding: 40px 0; cursor: pointer; width: 95%;}
+footer .container .contact{padding: 40px 0; width: 95%;}
 footer .container .title{font-size: 22px; color: white; padding: 10px 0;}
 footer .container ul{padding: 15px 0; line-height: 34px;}
 footer .logo{position: absolute; top: 0; right:0; height: 100%;}
