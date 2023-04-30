@@ -8,8 +8,8 @@
 노션을 통해 보다 자세한 작업과정을 확인하실 수 있습니다 :arrow_forward: <a href="https://ingseo.notion.site/a614b41638b04c7da2191429b1cb6995?v=a2b364dcf694451e93f960ec5985c0d6"><img src="https://img.shields.io/badge/Notion-000000?style=flat&logo=Notion&logoColor=white" /></a>
 ***
 ### 주요 요소
-1. 드롭다운메뉴, 모바일메뉴
-2. 마우스오버를 통한 각종 동적인 화면 구성
+1. 각종 팝업
+2. 부트스트랩과 grid 기능을 이용한 간편한 화면구성
 
 ### 추가 예정 사항
 1. 로그인, 로그아웃, 회원가입 API 추가
