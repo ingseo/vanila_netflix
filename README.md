@@ -1,5 +1,5 @@
 # :movie_camera: Netflix 고디바 웹사이트 리디자인 (반응형) 
-프로젝트 링크 :point_right: https://ingseo.github.io/react_godiva/
+프로젝트 링크 :point_right: https://ingseo.github.io/vanila_netflix/netflix
 
 ***
 ### 프로젝트 소개
